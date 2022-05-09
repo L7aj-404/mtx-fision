@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MTX-Fashion</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./bootstrap-5.1.3-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./font-awesome-4.7.0/font-awesome.min.css">
+    <link rel="stylesheet" href="./aos/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./aos/aos.css">
+    <link rel="stylesheet" href="./STYLE.css">
+    <title>HanaeMTX-Fashion</title>
+</head>
+
+<body>
+    <header class="">
+        <nav class="nav-colection">
+            <button class="button-up rounded-circle py-1 px-2 position-fixed " id='btnup'>
+					<i class="fas fa-arrow-up"></i>
+				</button>
+
+            <form class="search-form position-fixed shadow-lg " id='searchBar'>
+                <div class="form-content position-relative">
+                    <input class="input-form py-1 px-3" name="input-search" placeholder="search ..." id='inputBar'>
+                    <span class="form-icon position-absolute" id='formIcon'><i class="fas fa-search"></i></span>
+                </div>
+            </form>
+            <form class="login-form position-fixed shadow-lg " id='loginBar'>
+                <div class="text-end p-0">
+                    <span class="d-none m-2" id='closeIcon'><i class="fas fa-times-circle"></i></span>
+                </div>
+
+                <div class="form-content position-relative  justify-content-center row">
+                    <img src="./login.png" alt="">
+                    <div class="form-group">
+                        <label for="input-login"><i class="fas fa-user"></i> User Name</label>
+                        <input class="input-form py-1 px-3 m-3" name="input-login" placeholder="User name ..." id='inputBar'>
+                    </div>
+                    <div>
+                        <label for="input-login" class="m-3"><i class="fas fa-solid fa-lock"></i> Pasword</label>
+                        <input class="input-form py-1 px-3 m-3" name="input-login" placeholder="Pasword ..." id='inputBar'>
+                    </div>
+                    <div>
+                        <button class="btn btn-1 mb-2">Login</button>
+                    </div>
+                    <div class="control row">
+                        <a href="">Forgot password </a>
+                        <a href="">Creat New Account</a>
+                    </div>
+
+
+                    <span class="form-icon position-absolute" id='formIcon'><i class="fas fa-search"></i></span>
+                </div>
+            </form>
+
+            <div class="_navbar min-vh-100 position-fixed d-lg-none" id='_navbar'>
+                <div class="close-btn py-2 px-3" id='close-btn'>
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="navbar-content">
+                    <ul>
+                        <li class="items item1 my-md-4 my-3">
+                            <form class="search-form  shadow-lg" id='searchBar'>
+                                <div class="form-content position-relative">
+                                    <input class="input-form py-1 px-3 " name="input-search" placeholder="search ..." id='inputBar'>
+                                    <span class="form-icon  icon-opacity" id='formIcon'><i class="fas fa-search icon-opacity"></i></span>
+                                </div>
+                            </form>
+                        </li>
+                        <li class="items item1 my-md-4 my-3 itmms"><a class="link" href='#home'>home</a></li>
+                        <li class="items item1 my-md-4 my-3 itmms"><a class="link" href='./index.html'>about</a></li>
+                        <li class="items item1 my-md-4 my-3 itmms"><a class="link" href='./index.html'>services</a></li>
+                        <li class="items item1 my-md-4 my-3 itmms"><a class="link" href='./Categories.html'>categories</a></li>
+                        <li class="items item1 my-md-4 my-3 itmms"><a class="link" href='./Colection.html'>Colection</a></li>
+                        <li class="items item1 my-md-4 my-3 itmms"><a class="link" href='./index.html'>blogs</a></li>
+                        <li class="items item1 my-md-4 my-3 itmms"><a class="link" href='./index.html'>reviews</a></li>
+                        <li class="items item1 my-md-4 my-3 itmms"><a class="link" href='./index.html'>contact</a></li>
+                        <li class="items item1 my-md-4 my-3 itmms"><button class="btnlog" id="login2">Log in</button></li>
+                        <li class="items item1 my-md-4 my-3 itmms"><a class="link" href='#contact'>Sign up</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="header py-2 fixed-top nav-colection" id='header'>
+                <div class="container">
+                    <div class="header-content d-flex justify-content-between align-items-center">
+                        <div class="left-side">
+                            <a href='#home' class="d-flex align-items-center">
+                                <span class="icons icon mx-2 d-inline-block d-lg-none " id="bar"><i class="fas fa-bars " id='bars'></i></span>
+                                <p class="brand-text" id='brand-title'>
+                                    <!--<img class='brand-img me-2' src='./imgs/icon.png' alt='icon'>-->MTX-<span class="brand-sub-title">Fashion</span></p>
+                            </a>
+                        </div>
+                        <div class="middle-side">
+                            <ul class="d-flex">
+                                <li class="items item1 mx-2"><a class="link" href='./index.html'>home</a></li>
+                                <li class="items item1 mx-2"><a class="link" href='./index.html'>about</a></li>
+                                <li class="items item1 mx-2"><a class="link" href='./index.html'>services</a></li>
+                                <li class="items item1 mx-2"><a class="link" href='./Categories.html'>categories</a></li>
+                                <li class="items item1 mx-2"><a class="link" href='./Colection.html'>Colection</a></li>
+                                <li class="items item1 mx-2"><a class="link" href='./index.html'>blogs</a></li>
+                                <li class="items item1 mx-2"><a class="link" href='./index.html'>reviews</a></li>
+                                <li class="items item1 mx-2"><a class="link" href='./index.html'>contact</a></li>
+                                <li class="items item1 mx-2">
+                                    <form class="search-form  shadow-lg  w-100" id='searchBar'>
+                                        <div class="form-content position-relative w-100">
+                                            <input class="input-form py-1 px-3 w-100" name="input-search" placeholder="search ..." id='inputBar'>
+                                            <span class="form-icon position-absolute" id='formIcon'><i class="fas fa-search"></i></span>
+                                        </div>
+                                    </form>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class=right-side>
+                            <ul>
+
+                                <li class="icons icon mx-2"><i class="fas fa-sign-in" id='loginBtn' title="log in"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </nav>
+
+
+        <div class="hero shadow-lg position-relative " id='home'>
+            <div id="carouselExampleIndicators1" class="min-vh-100 carousel slide container  d-flex py-50" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li>
+                        <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    </li>
+                    <li>
+                        <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    </li>
+                    <li>
+                        <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </li>
+                </ol>
+                <div class="carousel-inner hero-content container h-100" data-aos='fade-up' data-aos-delay='150'>
+                    <div class="content carousel-item  active">
+                        <div class="row p-1">
+                            <h4 class="hero-title mb-5 col-12 text-center">MTX-<span><img src="./imgs/dress.png" alt=""></span><span class="hero-sub-title">Fashion</span></h4>
+                            <div class="left-side col-6  p-0 m-0">
+                                <h6 class="hero-under-text text-muted ">ready to see our Colection ?</h6>
+                                <p class="hero-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+
+                            </div>
+                            <div class="sub-img right-sid col-6 p-0 m-0">
+                                <img src=" ./imgs/fasad1.png " alt=" ">
+                            </div>
+                            <div class="text-center mb-5">
+                                <button class="hero-btn py-2 px-3 rounded mt-3"><a href = '#menu'>check our Colection</a></button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class=" content exept  carousel-item container">
+                        <div class="row ">
+                            <div class="left-side col-6">
+                                <h4 class="hero-title mb-5">Colection of This<span><img src="./imgs/dress.png" alt=""></span><span class="hero-sub-title">Summer</span></h4>
+                                <h6 class="hero-under-text text-muted ">Summer Colection ?</h6>
+                                <p class="hero-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                                <div class="text-center ">
+                                    <button class="hero-btn py-2 px-3 rounded mt-3"><a href = '#menu'>Check This Summer</a></button>
+                                </div>
+                            </div>
+                            <div class="right-side text-lg-start text-center col-6" id="casinfo">
+                                <img src="./imgs/cover1.jpg" alt="">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class=" content  exept carousel-item container ">
+                        <div class="row ">
+                            <div class="left-side col-6">
+                                <h4 class="hero-title mb-5">The latest<span><img src="./imgs/dress.png" alt=""></span><span class="hero-sub-title">Additions</span></h4>
+                                <h6 class="hero-under-text text-muted ">ready to see our Colection ?</h6>
+                                <p class="hero-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                                <div class="text-center ">
+                                    <button class="hero-btn py-2 px-3 rounded mt-3"><a href = '#menu'>check our Additions</a></button>
+                                </div>
+                            </div>
+                            <div class="right-side text-lg-start text-center col-6 min-vh-100" id="casinfo">
+                                <img src="./imgs/adition.png" alt="" class=" ">
+                            </div>
+                        </div>
+
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators1" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators1" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+
+            </div>
+    </header>
+    <section>
+        <article class="about py-5 my-5" id='about'>
+            <div class="container py-4">
+                <div class="about-content">
+                    <div class="about-title text-center pb-5">
+                        <h3 class="section-title mb-5 text-center">Our Team</h3>
+                    </div>
+                    <div class="row align-items-center justify-content-center">
+                        <div class="c col-lg-6 col-11 col-md-4 mb-lg-0 mb-5 ">
+                            <div class="left-side text-center text-lg-start d-flex align-items-center " data-aos='fade-up' data-aos-delay='150'>
+                                <div class="m-3 ">
+                                    <div class="tes-user-profile mb-3 d-flex align-items-center">
+                                        <img class="img-thumbnail rounded-circle me-3" src='./imgs/user-1.jpg' alt="testimonial 1" />
+                                        <div class="user-names">
+                                            <h5 class="user-name">Hanae Mks</h5>
+                                            <h6 class="user-activity text-muted">Designer</h6>
+                                        </div>
+                                    </div>
+                                    <div class="tes-user-profile mb-3 d-flex align-items-center">
+                                        <img class="img-thumbnail rounded-circle me-3" src='./imgs/user-2.jpg' alt="testimonial 1" />
+                                        <div class="user-names">
+                                            <h5 class="user-name">Safae Safi</h5>
+                                            <h6 class="user-activity text-muted">Designer</h6>
+                                        </div>
+                                    </div>
+                                    <div class="tes-user-profile mb-3 d-flex align-items-center">
+                                        <img class="img-thumbnail rounded-circle me-3" src='./imgs/user-3.jpg' alt="testimonial 1" />
+                                        <div class="user-names">
+                                            <h5 class="user-name">Mohamed</h5>
+                                            <h6 class="user-activity text-muted">Designer</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="m-3 more-team">
+                                    <div class="tes-user-profile mb-3 d-flex align-items-center">
+                                        <img class="img-thumbnail rounded-circle me-3" src='./imgs/user-1.jpg' alt="testimonial 1" />
+                                        <div class="user-names">
+                                            <h5 class="user-name">Hanae Mks</h5>
+                                            <h6 class="user-activity text-muted">Designer</h6>
+                                        </div>
+                                    </div>
+                                    <div class="tes-user-profile mb-3 d-flex align-items-center">
+                                        <img class="img-thumbnail rounded-circle me-3" src='./imgs/user-2.jpg' alt="testimonial 1" />
+                                        <div class="user-names">
+                                            <h5 class="user-name">Safae Safi</h5>
+                                            <h6 class="user-activity text-muted">Designer</h6>
+                                        </div>
+                                    </div>
+                                    <div class="tes-user-profile mb-3 d-flex align-items-center">
+                                        <img class="img-thumbnail rounded-circle me-3" src='./imgs/user-3.jpg' alt="testimonial 1" />
+                                        <div class="user-names">
+                                            <h5 class="user-name">Mohamed</h5>
+                                            <h6 class="user-activity text-muted">Designer</h6>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="c  col-md-6 col-lg-6 col-11 swiper mySwiper" data-aos='fade-up' data-aos-delay='150'>
+                            <div class="right-side text-lg-start text-center swiper-wrapper" id="casinfo">
+                                <div class="swiper-slide">
+                                    <p class="text-muted mb-1">get to know us</p>
+                                    <p class="about-sub-title mb-4">Lorem Ipsum Dolor Sit Amet</p>
+                                    <p class="about-desc mb-4">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                                        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                    </p>
+                                    <button class="about-button text-capitalize py-2 px-3 rounded mx-lg-0 mx-auto"><a class="getintouch" href = '#contact'>get in touch</a></button>
+                                </div>
+                                <div class="swiper-slide">
+                                    <p class="text-muted mb-1">get to know us</p>
+                                    <p class="about-sub-title mb-4">Lorem Ipsum Dolor Sit Amet</p>
+                                    <p class="about-desc mb-4">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                                        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                    </p>
+                                    <button class="about-button text-capitalize py-2 px-3 rounded mx-lg-0 mx-auto"><a class="getintouch" href = '#contact'>get in touch</a></button>
+                                </div>
+                                <div class="swiper-slide">
+                                    <p class="text-muted mb-1">get to know us</p>
+                                    <p class="about-sub-title mb-4">Lorem Ipsum Dolor Sit Amet</p>
+                                    <p class="about-desc mb-4">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                                        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                    </p>
+                                    <button class="about-button text-capitalize py-2 px-3 rounded mx-lg-0 mx-auto"><a class="getintouch" href = '#contact'>get in touch</a></button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="services py-5 my-5" id='services'>
+            <div class="container py-5">
+                <div class="services-content">
+                    <div class="services-title text-center pb-5">
+                        <p class="title big-title">our services</p>
+                    </div>
+                    <div class="row align-items-center">
+                        <div class="c col-lg-6 col-11">
+                            <div class="left-side mb-lg-0 mb-5" data-aos='fade-up' data-aos-delay='150'>
+                                <div class="box mb-5 d-flex align-items-center">
+                                    <div class="img w-25 me-4">
+                                        <img class="img-fluid w-100" src='./imgs/best-quality.svg' alt='best quality' />
+                                    </div>
+                                    <div class="text">
+                                        <p class="box-title">Thin Materials</p>
+                                        <p class="box-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                                    </div>
+                                </div>
+                                <div class="box mb-5 d-flex align-items-center">
+                                    <div class="img w-25 me-4">
+                                        <img class="img-fluid w-100" src='./imgs/daily-service.svg' alt='daily service' />
+                                    </div>
+                                    <div class="text">
+                                        <p class="box-title">Creativity in Designs</p>
+                                        <p class="box-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                                    </div>
+                                </div>
+                                <div class="box d-flex align-items-center">
+                                    <div class="img w-25 me-4">
+                                        <img class="img-fluid w-100" src='./imgs/free-delivery.svg' alt='free delivery' />
+                                    </div>
+                                    <div class="text">
+                                        <p class="box-title">On time Delivery</p>
+                                        <p class="box-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="c col-lg-6 col-11 text-center text-lg-end" data-aos='fade-up' data-aos-delay='150'>
+                            <img class="img-fluid w-75" src='./imgs/fashion-designer.png' alt='services img'>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="reviews py-5 my-5" id='reviews'>
+            <div class="container py-4">
+                <div class="reviews-content">
+                    <div class="reviews-title text-center pb-5">
+                        <p class="title big-title">our customers reviews</p>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="c col-lg-8 col-11" data-aos='fade-up' data-aos-delay='150'>
+                            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                </div>
+                                <div class="carousel-inner py-3">
+                                    <div class="testimonial carousel-item active shadow bg-white p-4 mb-5">
+                                        <div class="tes-user-profile mb-3 d-flex align-items-center">
+                                            <img class="img-thumbnail rounded-circle me-3" src='./imgs/user-1.jpg' alt="testimonial 1" />
+                                            <div class="user-names">
+                                                <h5 class="user-name">Harold Ederson</h5>
+                                                <h6 class="user-activity text-muted">client</h6>
+                                            </div>
+                                        </div>
+                                        <p class="user-text mb-3 text-muted">
+                                            orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                                        </p>
+                                        <div class="user-rate">
+                                            <i class="fas fa-star me-1"></i>
+                                            <i class="fas fa-star me-1"></i>
+                                            <i class="fas fa-star me-1"></i>
+                                            <i class="fas fa-star me-1"></i>
+                                            <i class="fas fa-star me-1"></i>
+                                        </div>
+                                    </div>
+                                    <div class="testimonial carousel-item shadow bg-white p-4 mb-5">
+                                        <div class="tes-user-profile mb-3 d-flex align-items-center">
+                                            <img class="img-thumbnail rounded-circle me-3" src='./imgs/user-2.jpg' alt="testimonial 2" />
+                                            <div class="user-names">
+                                                <h5 class="user-name">May Kin</h5>
+                                                <h6 class="user-activity text-muted">client</h6>
+                                            </div>
+                                        </div>
+                                        <p class="user-text mb-3 text-muted">
+                                            orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                                        </p>
+                                        <div class="user-rate">
+                                            <i class="fas fa-star me-1"></i>
+                                            <i class="fas fa-star me-1"></i>
+                                            <i class="fas fa-star me-1"></i>
+                                            <i class="fas fa-star me-1"></i>
+                                            <i class="fas fa-star me-1"></i>
+                                        </div>
+                                    </div>
+                                    <div class="testimonial carousel-item shadow bg-white p-4 mb-5">
+                                        <div class="tes-user-profile mb-3 d-flex align-items-center">
+                                            <img class="img-thumbnail rounded-circle me-3" src='./imgs/user-3.jpg' alt="testimonial 3" />
+                                            <div class="user-names">
+                                                <h5 class="user-name">Ramand Ranington</h5>
+                                                <h6 class="user-activity text-muted">client</h6>
+                                            </div>
+                                        </div>
+                                        <p class="user-text mb-3 text-muted">
+                                            orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                                        </p>
+                                        <div class="user-rate">
+                                            <i class="fas fa-star me-1"></i>
+                                            <i class="fas fa-star me-1"></i>
+                                            <i class="fas fa-star me-1"></i>
+                                            <i class="fas fa-star me-1"></i>
+                                            <i class="fas fa-star me-1"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="section-contact py-5 mb-5" id="contact">
+            <div class="contact-content">
+                <div class="container py-5">
+                    <h3 class="section-title mb-5 text-center">contact us</h3>
+                    <div class="row align-items-center justify-content-center">
+                        <div class="c col-md-6 col-10 mb-md-0 mb-5 aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+                            <div class="firstname mb-2">
+                                <label class="mb-2">first name</label>
+                                <input class="w-100 py-2 px-3 rounded" name="first name" placeholder="first name" type="text">
+                            </div>
+                            <div class="lastname mb-2">
+                                <label class="mb-2">last name</label>
+                                <input class="w-100 py-2 px-3 rounded" name="last name" placeholder="last name" type="text">
+                            </div>
+                            <div class="email mb-2">
+                                <label class="mb-2">email</label>
+                                <input class="w-100 py-2 px-3 rounded" name="email" placeholder="email" type="email">
+                            </div>
+                            <div class="email mb-3">
+                                <label class="mb-2">write your message down here</label>
+                                <textarea class="form-control py-2 px-3" id="textarea" rows="2"></textarea>
+                            </div>
+                            <button class="btn btn-1">submit</button>
+                        </div>
+                        <div class="c col-md-6 col-10 text-center text-md-end aos-init" data-aos="fade-down" data-aos-delay="300">
+                            <img class="w-75" src="./imgs/contact.svg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="footer-content">
+                <div class="row mb-3">
+                    <div class="c col-lg-6 col-12 mb-5" data-aos='fade-up' data-aos-delay='150'>
+                        <p class="footer-text mb-3" id='brand-title'>MTX-<span class="brand-sub-title">Fashion</span><span class="brand-sub-title">Food</span>
+                        </p>
+                        <p class="footer-desc pb-4 me-4 mb-3">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam </p>
+                        <p class="info email    text-muted py-1"><i class="fas fa-envelope me-2"></i>MTX-Fashion@support.com
+                        </p>
+                        <p class="info number   text-muted py-1"><i class="fas fa-phone-alt me-2"></i>(212) 773-749546</p>
+                        <p class="info location text-muted py-1"><i class="fas fa-map-marker-alt py-1 me-2"></i>642 Adouz foum Al Anssar, Beni Mellal(BM), 56894</p>
+                    </div>
+                    <div class="c col-lg-3 col-12 mb-3" data-aos='fade-up' data-aos-delay='250'>
+                        <div class="quick-links">
+                            <h6 class="ql mb-4">quick links</h6>
+                            <div class="links">
+                                <ul>
+                                    <li class="items item1 my-2"><a class="link" href='#home'><i class = 'fas fa-arrow-right me-2'></i>home</a></li>
+                                    <li class="items item1 my-2"><a class="link" href='#about'><i class = 'fas fa-arrow-right me-2'></i>about</a></li>
+                                    <li class="items item1 my-2"><a class="link" href='#services'><i class = 'fas fa-arrow-right me-2'></i>services</a></li>
+                                    <li class="items item1 my-2"><a class="link" href='#categories'><i class = 'fas fa-arrow-right me-2'></i>categories</a></li>
+                                    <li class="items item1 my-2"><a class="link" href='#menu'><i class = 'fas fa-arrow-right me-2'></i>Colection</a></li>
+                                    <li class="items item1 my-2"><a class="link" href='#blogs'><i class = 'fas fa-arrow-right me-2'></i>blogs</a></li>
+                                    <li class="items item1 my-2"><a class="link" href='#reviews'><i class = 'fas fa-arrow-right me-2'></i>reviews</a></li>
+                                    <li class="items item1 my-2"><a class="link" href='#contact'><i class = 'fas fa-arrow-right me-2'></i>contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c col-lg-3 col-12 mb-3" data-aos='fade-up' data-aos-delay='350'>
+                        <div class="quick-links">
+                            <h6 class="ql mb-4">follow us</h6>
+                            <div class="links">
+                                <ul>
+                                    <li class="items item1 my-2"><a class="link" href='https://www.facebook.com/' target='_blank'><i class = 'fas fa-arrow-right me-2'></i>facebook</a></li>
+                                    <li class="items item1 my-2"><a class="link" href='https://www.instagram.com/' target='_blank'><i class = 'fas fa-arrow-right me-2'></i>instagram</a></li>
+                                    <li class="items item1 my-2"><a class="link" href='https://www.twitter.com/' target='_blank'><i class = 'fas fa-arrow-right me-2'></i>twitter</a></li>
+                                    <li class="items item1 my-2"><a class="link" href='https://www.pinterest.com/' target='_blank'><i class = 'fas fa-arrow-right me-2'></i>pinterest</a></li>
+                                    <li class="items item1 my-2"><a class="link" href='https://www.youtube.com/' target='_blank'><i class = 'fas fa-arrow-right me-2'></i>youtube</a></li>
+                                    <li class="items item1 my-2"><a class="link" href='https://www.unsplash.com/' target='_blank'><i class = 'fas fa-arrow-right me-2'></i>unsplash</a></li>
+                                    <li class="items item1 my-2"><a class="link" href='https://www.snapchat.com/' target='_blank'><i class = 'fas fa-arrow-right me-2'></i>snapchat</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright text-center">
+                    <p class="small text-muted mb-0">©2021 produit line .aall rights rederved /disigne by L7aj</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src='./script.js'></script>
+    <script src="./bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="./aos.js"></script>
+    <script src="./aos/aos.js"></script>
+    <script src="./aos/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'vertical',
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
+    </script>
+</body>
+
+</html>
+
+</html>
